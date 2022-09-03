@@ -1,0 +1,37 @@
+﻿@model EntityLayer.Concrete.Heading
+@{
+    ViewBag.Title = "EditHeading";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>EditHeading</h2>
+
+@using (Html.BeginForm("EditHeading", "Heading", FormMethod.Post)) 
+{ 
+<div class="form-group">
+
+    @Html.HiddenFor(m => m.HeadingID, new { @class = "form-control" })
+    @Html.Label("Başlık Adı")
+    @Html.TextBoxFor(m => m.HeadingName, new { @class = "form-control" })
+    @Html.ValidationMessageFor(m => m.HeadingName)
+    <br />
+    @Html.Label("Kategori ")
+    @*@Html.TextBoxFor(m => m.CategoryID, new { @class = "form-control" })*@
+    @Html.DropDownListFor(m => m.CategoryID, (List<SelectListItem>)ViewBag.category, new { @class = "form-control" })
+    @Html.ValidationMessageFor(m => m.CategoryID)
+    <br />
+    @Html.Label("Yazar ")
+    @*@Html.TextBoxFor(m => m.WriterID, new { @class = "form-control" })*@
+    @Html.TextBoxFor(m => m.WriterID, new { @class = "form-control" })
+    @Html.ValidationMessageFor(m => m.WriterID)
+    <br />
+    @Html.Label("Tarih")
+    @Html.TextBoxFor(m => m.HeadingDate, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-success">Düzenle</button>
+
+</div>
+
+
+
+}

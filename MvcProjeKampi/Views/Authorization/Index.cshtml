@@ -1,0 +1,65 @@
+﻿@using EntityLayer.Concrete
+@model List<Admin>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+@{ 
+    string status = "";
+    string statucolor = "";
+}
+<br />
+<table class="table table-bordered">
+    <tr>
+        <th>#</th>
+        <th>Kullanıcı Adı</th>
+        <th>Yetki</th>
+        <th>Statüs</th>
+        <th>Pasif Yap</th>
+        <th>Yetkisini Değiştir</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        if (item.AdminStatus)
+        {
+            status = "Pasif yap";
+            statucolor = "btn btn-danger";
+        }
+        else
+        {
+            status = "Aktif yap";
+            statucolor = "btn btn-success";
+            
+        }
+
+        
+<tr>
+    <th>@item.AdminID</th>
+    <td>@item.AdminUserName</td>
+    <td>@item.AdminRole</td>
+    <td>
+        @if (item.AdminStatus == true)
+        {
+            <span class="badge badge-success">Aktif</span>
+        }
+        else
+        {
+            <span class="badge badge-secondary">Pasif</span>
+        }
+    </td>
+    <td><a href="/Authorization/DeleteAdmin/@item.AdminID" class="@statucolor">@status</a></td>
+    @*<a class="@color2 btn-sm" href="/Heading/DeleteHeading/@item.HeadingID">
+        <i class="fas fa-trash">
+        </i>
+        @durum1
+    </a>*@
+    <td><a href="/Authorization/EditAdmin/@item.AdminID" class="btn btn-warning">Yetkisini Değiştir</a></td>
+</tr>
+    }
+
+</table>
+<a href="/Authorization/AddAdmin" class="btn btn-info">Yeni Kategori</a>
+
+
+

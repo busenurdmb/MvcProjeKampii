@@ -1,0 +1,39 @@
+﻿@model EntityLayer.Concrete.Admin
+@{
+    ViewBag.Title = "AddAdmin";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>AddAdmin</h2>
+
+@*<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script src="~/Scripts/jquery-3.4.1.js"></script>
+<h1>Yeni Kategori Eklme Sayfası</h1>*@
+<br />
+@using (Html.BeginForm("AddAdmin", "Authorization", FormMethod.Post))
+{
+<div class="form-group">
+    @Html.Label("Admin Kullanıcı Adı")
+    @Html.TextBoxFor(m => m.AdminUserName, new { @class = "form-control" })
+    <br />
+    @Html.Label("Şifreyi Giriniz")
+    @Html.TextBoxFor(m => m.AdminPassword, new { @class = "form-control" })
+    <br />
+    @Html.DropDownListFor(x => x.AdminRole, (List<SelectListItem>)ViewBag.roles, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-success" id="btn1">Kaydet</button>
+
+</div>
+}
+<a href="/Authorization/Index/" class="navbar-btn">
+    <p>
+        Listeye Git
+    </p>
+</a>
+@*<script>
+    $('#btn1').click(function () {
+        swal("Tebrikler!", "Başarılı bir şekilde eklendi!", "success");
+    });
+</script>*@
+
