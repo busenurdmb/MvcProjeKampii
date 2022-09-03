@@ -7,13 +7,13 @@ namespace DataAccessLayer.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.4.4")]
-    public sealed partial class a1 : IMigrationMetadata
+    public sealed partial class CreateSkiilsTable : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(a1));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(CreateSkiilsTable));
         
         string IMigrationMetadata.Id
         {
-            get { return "202209031135343_a1"; }
+            get { return "202209031942557_CreateSkiilsTable"; }
         }
         
         string IMigrationMetadata.Source

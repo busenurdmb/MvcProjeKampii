@@ -125,9 +125,13 @@
     <Compile Include="Migrations\202209031131396_aaaa.designer.cs">
       <DependentUpon>202209031131396_aaaa.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202209031135343_a1.cs" />
-    <Compile Include="Migrations\202209031135343_a1.designer.cs">
-      <DependentUpon>202209031135343_a1.cs</DependentUpon>
+    <Compile Include="Migrations\202209031942557_CreateSkiilsTable.cs" />
+    <Compile Include="Migrations\202209031942557_CreateSkiilsTable.designer.cs">
+      <DependentUpon>202209031942557_CreateSkiilsTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202209031951473_vbc.cs" />
+    <Compile Include="Migrations\202209031951473_vbc.designer.cs">
+      <DependentUpon>202209031951473_vbc.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -182,8 +186,11 @@
     <EmbeddedResource Include="Migrations\202209031131396_aaaa.resx">
       <DependentUpon>202209031131396_aaaa.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202209031135343_a1.resx">
-      <DependentUpon>202209031135343_a1.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202209031942557_CreateSkiilsTable.resx">
+      <DependentUpon>202209031942557_CreateSkiilsTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202209031951473_vbc.resx">
+      <DependentUpon>202209031951473_vbc.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup />
