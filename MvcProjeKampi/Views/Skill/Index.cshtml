@@ -1,7 +1,9 @@
-﻿
+﻿@using EntityLayer.Concrete
+@model List<Skill>
 @{
     Layout = null;
 }
+
 
 <!--
 Author: W3layouts
@@ -30,13 +32,13 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     <!--ResponsiveTabs-->
     <script src="~/AdminLTE-3.0.4/skill/js/easyResponsiveTabs.js" type="text/javascript"></script>
     <script type="text/javascript">
-	$(document).ready(function () {
-		$('#horizontalTab').easyResponsiveTabs({
-			type: 'default', //Types: default, vertical, accordion
-			width: 'auto', //auto or any width like 600px
-			fit: true   // 100% fit in a container
-		});
-	});
+        $(document).ready(function () {
+            $('#horizontalTab').easyResponsiveTabs({
+                type: 'default', //Types: default, vertical, accordion
+                width: 'auto', //auto or any width like 600px
+                fit: true   // 100% fit in a container
+            });
+        });
     </script>
     <!--//ResponsiveTabs-->
 </head>
@@ -47,19 +49,19 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         <div class="main-info w3l">
             <div class="main-row">
                 <!-- main-row-one -->
+    
                 <div class="profile-grid logo wthree">
-                    <img src="~/AdminLTE-3.0.4/skill/images/img1.jpg" alt="">
+                    <img src="~/AdminLTE-3.0.4/skill/images/DMB.png" alt="">
                     <h2>Buse Nur Demirbaş</h2>
                     <p>Bilgisayar Mühendisliği Öğrencisi</p>
 
                 </div>
                 <h3 class="title">Yetenekler</h3>
                 <div class="col-md-6 skills-right bar_group">
-
-                    <div class='bar_group__bar thin' label='Lorem ipsum &nbsp;&nbsp; 80%' value='200'></div>
-                    <div class='bar_group__bar thin' label='Quis nostrud &nbsp;&nbsp; 100%' value='250'></div>
-                    <div class='bar_group__bar thin' label='Sed do eiusmod &nbsp;&nbsp; 72%' value='180'></div>
-                    <div class='bar_group__bar thin' label='Ut enim adnim &nbsp;&nbsp; 88%' value='220'></div>
+                    @foreach (var item in Model)
+                    {
+                        <div class='bar_group__bar thin' label='@item.SkillName  &nbsp;&nbsp;  @item.SkillValue%' value='@item.SkillValue'></div>
+                    }
                 </div>
                 <!--bar-js-->
                 <script src="~/AdminLTE-3.0.4/skill/js/bars.js"></script>
@@ -83,3 +85,4 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     <!-- main -->
 </body>
 </html>
+

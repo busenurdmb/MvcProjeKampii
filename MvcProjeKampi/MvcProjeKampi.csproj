@@ -143,6 +143,7 @@
     <Compile Include="Controllers\AboutController.cs" />
     <Compile Include="Controllers\AdminCategoryController.cs" />
     <Compile Include="Controllers\AuthorizationController.cs" />
+    <Compile Include="Controllers\ScheduleController.cs" />
     <Compile Include="Controllers\CategoryController.cs" />
     <Compile Include="Controllers\ChartController.cs" />
     <Compile Include="Controllers\ContactController.cs" />
@@ -164,6 +165,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Schedule.cs" />
     <Compile Include="Models\CategoryClass.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Roles\AdminRoleProvider.cs" />
@@ -2044,6 +2046,10 @@
     <Content Include="AdminLTE-3.0.4\plugins\toastr\toastr.min.js" />
     <Content Include="AdminLTE-3.0.4\skill\css\style.css" />
     <Content Include="AdminLTE-3.0.4\skill\images\5.jpg" />
+    <Content Include="AdminLTE-3.0.4\skill\images\DMB.png" />
+    <Content Include="AdminLTE-3.0.4\skill\images\DMB2.png" />
+    <Content Include="AdminLTE-3.0.4\skill\images\DMB3.png" />
+    <Content Include="AdminLTE-3.0.4\skill\images\DMB4.png" />
     <Content Include="AdminLTE-3.0.4\skill\images\img1.jpg" />
     <Content Include="AdminLTE-3.0.4\skill\images\sprite.png" />
     <Content Include="AdminLTE-3.0.4\skill\index.html" />
@@ -2660,6 +2666,11 @@
     <Content Include="Views\Authorization\AddAdmin.cshtml" />
     <Content Include="Views\Authorization\EditAdmin.cshtml" />
     <Content Include="Views\Skill\Index.cshtml" />
+    <Content Include="Views\Skill\SkillListMenu.cshtml" />
+    <Content Include="Views\Skill\AddSkill.cshtml" />
+    <Content Include="Views\Skill\EditSkill.cshtml" />
+    <Content Include="Views\Calendar\Calendar.cshtml" />
+    <Content Include="Views\Schedule\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

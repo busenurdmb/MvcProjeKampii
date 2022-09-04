@@ -7,13 +7,13 @@ namespace DataAccessLayer.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.4.4")]
-    public sealed partial class vbc : IMigrationMetadata
+    public sealed partial class CreateSkillsTable : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(vbc));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(CreateSkillsTable));
         
         string IMigrationMetadata.Id
         {
-            get { return "202209031951473_vbc"; }
+            get { return "202209040952259_CreateSkillsTable"; }
         }
         
         string IMigrationMetadata.Source

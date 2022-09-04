@@ -7,15 +7,12 @@ using System.Threading.Tasks;
 
 namespace EntityLayer.Concrete
 {
-    public class Skiil
+    public class Skill
     {
         [Key]
         public int SkillID { get; set; }
         [StringLength(50)]
         public string SkillName { get; set; }
-        [StringLength(50)]
-        public string Skillvalues { get; set; }
-
-        public int add { get; set; }
+        public int SkillValue { get; set; }
     }
 }
