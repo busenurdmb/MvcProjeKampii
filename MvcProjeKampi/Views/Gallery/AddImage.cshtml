@@ -1,0 +1,36 @@
+﻿@model EntityLayer.Concrete.ImageFile
+@{
+    ViewBag.Title = "AddImage";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>AddImage</h2>
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script src="~/Scripts/jquery-3.4.1.js"></script>
+<h1>Yeni Kategori Eklme Sayfası</h1>
+<br />
+@using (Html.BeginForm("AddImage", "Gallery", FormMethod.Post,new {enctype="multipart/form-data"}))
+{
+<div class="form-group">
+    @Html.Label("Fotoğrafın Adı")
+    @Html.TextBoxFor(m => m.ImageName, new { @class = "form-control" })
+    @*@Html.ValidationMessageFor(m => m.CategoryName)*@
+
+    <br />
+    <input type="file" class="btn-danger" name="ImagePathh">
+    <br />
+    <button class="btn btn-success" id="btn1">Kaydet</button>
+
+</div>
+}
+<a href="/Gallery/Index/" class="navbar-btn">
+    <p>
+        Listeye Git
+    </p>
+</a>
+<script>
+    $('#btn1').click(function () {
+        swal("Tebrikler!", "Başarılı bir şekilde eklendi!", "success");
+    });
+</script>

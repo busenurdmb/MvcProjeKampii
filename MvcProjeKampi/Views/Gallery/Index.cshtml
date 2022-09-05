@@ -1,10 +1,10 @@
 ﻿@using EntityLayer.Concrete
-@model  List<ImageFile>
-
+@model List<ImageFile>
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
+
 
 
 <!DOCTYPE html>
@@ -35,7 +35,6 @@
                 <div class="col-sm-6">
                     <h1>Sözlük Galerisi</h1>
                 </div>
-                
             </div>
         </div><!-- /.container-fluid -->
     </section>
@@ -54,22 +53,28 @@
                             <div class="row">
                                 @foreach (var item in Model)
                                 {
-                                <div class="col-sm-2" >
-                                    <a href="@item.ImagePathh" data-toggle="lightbox" data-title="@item.ImageName" data-gallery="gallery"  >
-                                        <img src="@item.ImagePathh" class="img-fluid mb-2" alt="white sample"  style="height:200px; width:400px "/>
-                                    </a>
-                                </div>
+                                    <div class="col-sm-2">
+                                        <a href="@item.ImagePathh" data-toggle="lightbox" data-title="@item.ImageName" data-gallery="Gallery">
+                                            <img src="@item.ImagePathh" class="img-fluid mb-2" alt="white sample" style="height: 200px; width: 400px;" />
+                                        </a>
+                                    </div>
+                                    <div style="text-align:center">
+                                        <a class="btn btn-danger" href="/Gallery/DeleteImage/@item.ImageID">Sil</a>
+                                    </div>
                                 }
-
                             </div>
                         </div>
+                        <a href="/Gallery/AddImage" class="btn btn-primary">Resim Ekle</a>
+                       
                     </div>
                 </div>
             </div>
         </div><!-- /.container-fluid -->
     </section>
     <!-- /.content -->
-   
+    <!-- /.content-wrapper -->
+    <!-- Control Sidebar -->
+    <!-- /.control-sidebar -->
     <!-- ./wrapper -->
     <!-- jQuery -->
     <script src="~/AdminLTE-3.0.4/plugins/jquery/jquery.min.js"></script>
@@ -87,14 +92,13 @@
     <script src="~/AdminLTE-3.0.4/plugins/filterizr/jquery.filterizr.min.js"></script>
     <!-- Page specific script -->
     <script>
-    $(function () {
+        $(function () {
             $(document).on('click', '[data-toggle="lightbox"]', function (event) {
                 event.preventDefault();
                 $(this).ekkoLightbox({
                     alwaysShowClose: true
                 });
             });
-
             $('.filter-container').filterizr({ gutterPixels: 3 });
             $('.btn[data-filter]').on('click', function () {
                 $('.btn[data-filter]').removeClass('active');
@@ -103,3 +107,5 @@
         })</script>
 </body>
 </html>
+
+

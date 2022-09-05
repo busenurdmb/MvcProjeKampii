@@ -139,6 +139,10 @@
     <Compile Include="Migrations\202209040955455_sk.designer.cs">
       <DependentUpon>202209040955455_sk.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202209041559492_image.cs" />
+    <Compile Include="Migrations\202209041559492_image.designer.cs">
+      <DependentUpon>202209041559492_image.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -200,6 +204,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202209040955455_sk.resx">
       <DependentUpon>202209040955455_sk.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202209041559492_image.resx">
+      <DependentUpon>202209041559492_image.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup />
